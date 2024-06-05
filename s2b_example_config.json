@@ -1,19 +1,39 @@
 {
-  "study_name": "Aneravimm",
-  "subjects": ["VS_Aneravimm_010", "VS_Aneravimm_011"],
-  "data_to_bids":
-  [
-    {"datasetName": "t1_mprage_sag_p2_iso", "bidsDir": "anat", "bidsName": "acq-mprage_T1w"},
-    {"datasetName": "t2_tse_HR_cor_MTL", "bidsDir": "anat", "bidsName": "acq-hr_T2w"},
-    {"datasetName": "Resting State_bold AP 1.6mm HIPP", "bidsDir": "func", "bidsName": "task-restingState_acq-hipp_dir-AP_bold"},
-    {"datasetName": "Diff cusp66 b3000 AP 1.5mm", "bidsDir": "dwi", "bidsName": "acq-b3000_dir-AP_dwi"},
-    {"datasetName": "Diff cusp66 b0 PA 1.5mm", "bidsDir": "dwi", "bidsName": "acq-b0_dir-PA_dwi"}
-  ],
-  "dcm2niix":"/home/qduche/Software/dcm2niix_lnx/dcm2niix",
-  "dcm2niix_options": "-v 0 -z y",
-  "find_and_replace_subject":
-  [
-    {"find":"VS_Aneravimm_", "replace": "VS"},
-    {"find":"Vs_Aneravimm_", "replace": "VS"}
-  ]
+    "study_name": "Aneravimm",
+    "subjects": ["VS_Aneravimm_010", "VS_Aneravimm_011"],
+    "data_to_bids": [
+        {
+            "datasetName": "t1_mprage_sag_p2_iso",
+            "bidsDir": "anat",
+            "bidsName": "acq-mprage_T1w"
+        },
+        {
+            "datasetName": "t2_tse_HR_cor_MTL",
+            "bidsDir": "anat",
+            "bidsName": "acq-hr_T2w"
+        },
+        {
+            "datasetName": "Resting State_bold AP 1.6mm HIPP",
+            "bidsDir": "func",
+            "bidsName": "task-restingState_acq-hipp_dir-AP_bold"
+        },
+        {
+            "datasetName": "Diff cusp66 b3000 AP 1.5mm",
+            "bidsDir": "dwi",
+            "bidsName": "acq-b3000_dir-AP_dwi"
+        },
+        {
+            "datasetName": "Diff cusp66 b0 PA 1.5mm",
+            "bidsDir": "dwi",
+            "bidsName": "acq-b0_dir-PA_dwi"
+        }
+    ],
+    "data_to_bids_comments": "BIDS mapping should follow BIDS specification with bidsDir standing for the BIDS datatype, bidsName for the BIDS filename without subject and session prefix and extension.  See (https://github.com/bids-standard/bids-starter-kit/blob/main/src/folders_and_files/files.md) for exhaustive file templates",
+    "dcm2niix": "/home/qduche/Software/dcm2niix_lnx/dcm2niix",
+    "dcm2niix_comments": "dcm2niix field should contain the absolute path of the dcm2niix software used. In case of doubt type which dcm2niix in the used terminal. Note that it is recommended to use python (conda) virtual environment.",
+    "dcm2niix_options": "-v 0 -z y",
+    "find_and_replace_subject": [
+        {"find": "VS_Aneravimm_", "replace": "VS"},
+        {"find": "Vs_Aneravimm_", "replace": "VS"}
+    ]
 }
